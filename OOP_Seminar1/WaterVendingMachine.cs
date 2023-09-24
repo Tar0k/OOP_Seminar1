@@ -4,7 +4,7 @@ public class WaterVendingMachine: VendingMachine<BottleOfWater>
 {
     public Product GetProduct(string product, int volume)
     {
-        return Products.First(b => b.Name == product && b.Volume == volume);
+        return Products.First(wb => wb.Name == product && wb.Volume == volume);
     }
     
 }

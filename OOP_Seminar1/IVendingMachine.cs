@@ -2,7 +2,7 @@
 
 public interface IVendingMachine
 {
-    public void InitProducts(List<Product> startProducts);
+    public void InitProducts(IEnumerable<Product> startProducts);
     public Product GetProduct(string product);
     public void Add(Product product);
     public void PrintProducts();

@@ -2,8 +2,8 @@
 
 public abstract class Product(string name, int price)
 {
-        public string Name { get; set; } = name;
-        private int Price { get; set; } = price;
+        public string Name { get; } = name;
+        private int Price { get; } = price;
         protected string? Type { get; init; }
 
         public override string ToString() => $"Тип: {Type ?? "Неизвестен"}, Наименование: {Name}, цена: {Price}";

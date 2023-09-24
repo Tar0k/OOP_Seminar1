@@ -2,5 +2,5 @@
 
 public abstract class Beverage(string name, int price, int volume) : Product(name, price)
 {
-    public int Volume { get; set; } = volume;
+    public int Volume { get; } = volume;
 }

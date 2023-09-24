@@ -4,17 +4,16 @@ public abstract class VendingMachine<T> : IVendingMachine where T : Product
 {
     protected List<T> Products = new ();
 
-    public void InitProducts(List<Product> startProducts)
+    public void InitProducts(IEnumerable<Product> startProducts)
     {
         Products = startProducts
             .OfType<T>()
-            .Select(p => p as T)
             .ToList();
     }
 
     public Product GetProduct(string product)
     {
-        return Products.First(b => b.Name == product);
+        return Products.First(p => p.Name == product);
     }
 
     public void Add(Product product)
@@ -27,7 +26,7 @@ public abstract class VendingMachine<T> : IVendingMachine where T : Product
 
     public void PrintProducts()
     {
-        var text = string.Join("\n", Products.Select(b => b.ToString()));
+        var text = string.Join("\n", Products.Select(p => p.ToString()));
         Console.WriteLine(text);
     }
 }

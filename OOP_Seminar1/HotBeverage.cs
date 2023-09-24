@@ -8,5 +8,5 @@ public class HotBeverage : Beverage
         Temperature = temperature;
     }
     
-    public int Temperature { get; set; }
+    public int Temperature { get; }
 }
