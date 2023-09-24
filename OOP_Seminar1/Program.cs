@@ -11,10 +11,14 @@ using OOP_Seminar1;
 
 Console.WriteLine("===================LESSON==========================");
 var waterVendingMachine = new WaterVendingMachine();
-waterVendingMachine.Add(new BottleOfWater("Волжанка", 57, 2));
-waterVendingMachine.Add(new BottleOfWater("Мвятой источник", 45, 1));
-waterVendingMachine.Add(new BottleOfWater("Aqua mineral", 87, 1));
-waterVendingMachine.Add(new BottleOfWater("Bon aqua", 80, 3));
+var tempList = new List<Product>
+{
+    new BottleOfWater("Волжанка", 57, 2),
+    new BottleOfWater("Мвятой источник", 45, 1),
+    new BottleOfWater("Aqua mineral", 87, 1),
+    new BottleOfWater("Bon aqua", 80, 3)
+};
+waterVendingMachine.InitProducts(tempList);
 
 waterVendingMachine.PrintProducts();
 Console.WriteLine("===================Get by name==========================");
@@ -24,10 +28,15 @@ Console.WriteLine(waterVendingMachine.GetProduct("Bon aqua", 3));
 
 Console.WriteLine("===================HOMEWORK==========================");
 var hotBeverageVendingMachine = new HotBeverageVendingMachine();
-hotBeverageVendingMachine.Add(new HotBeverage("TESS", 57, 1, 70));
-hotBeverageVendingMachine.Add(new HotBeverage("LIPTON", 97, 4, 50));
-hotBeverageVendingMachine.Add(new HotBeverage("TESS", 40, 3, 40));
-hotBeverageVendingMachine.Add(new HotBeverage("НУРИ", 92, 2, 80));
+
+tempList = new List<Product>
+{
+    new HotBeverage("TESS", 57, 1, 70),
+    new HotBeverage("LIPTON", 97, 4, 50),
+    new HotBeverage("TESS", 40, 3, 40),
+    new HotBeverage("НУРИ", 92, 2, 80)
+};
+hotBeverageVendingMachine.InitProducts(tempList);
 hotBeverageVendingMachine.PrintProducts();
 Console.WriteLine("===================Get by name, volume and temperature======================");
 Console.WriteLine(hotBeverageVendingMachine.GetProduct("LIPTON", 4, 50));
