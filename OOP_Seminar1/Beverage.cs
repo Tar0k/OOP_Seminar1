@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace OOP_Seminar1;
+﻿namespace OOP_Seminar1;
 
 public abstract class Beverage(string name, int price, int volume) : Product(name, price)
 {

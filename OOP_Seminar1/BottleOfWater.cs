@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace OOP_Seminar1;
+﻿namespace OOP_Seminar1;
 
 public class BottleOfWater : Beverage
 {

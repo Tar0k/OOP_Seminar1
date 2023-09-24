@@ -1,6 +1,6 @@
 ﻿namespace OOP_Seminar1;
 
-public class VendingMachine<T> : IVendingMachine where T : Product
+public abstract class VendingMachine<T> : IVendingMachine where T : Product
 {
     protected List<T> Products = new ();
 
